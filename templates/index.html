@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion-Based Music Recommendation</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Real-Time Emotion-Based Music Recommender</h1>
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+    <main>
+        <!-- Video Feed Section -->
+        <section class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Live Video Feed" class="video-feed">
+            <h3 id="emotion-display">Detected Emotion: Waiting...</h3>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations">
+            <h2>Recommended Playlist</h2>
+            <div id="playlist" class="playlist-container">
+                <p class="no-recommendation">No recommendations yet. Please wait...</p>
+            </div>
+            <a id="spotify-link" href="#" target="_blank" class="spotify-button">Play on Spotify</a>
+        </section>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background-color: #1DB954; /* Spotify green */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure the dark mode button is positioned correctly */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #1aa34a;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Video Container */
+.video-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.video-feed {
+    border: 5px solid #1DB954;
+    border-radius: 15px;
+    max-width: 30%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+#emotion-display {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1DB954;
+}
+
+/* Recommendations Section */
+.recommendations {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .recommendations {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.recommendations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+body.dark-mode .recommendations h2 {
+    color: #ffffff;
+}
+
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upper-section, .lower-section {
+    display: flex;
+    justify-content: center;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 20px;
+    width: 100%;
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .playlist-item {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+
+.playlist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.playlist-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.playlist-item p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+body.dark-mode .playlist-item p {
+    color: #ffffff;
+}
+
+.playlist-item a {
+    text-decoration: none;
+    color: #1DB954;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: 2px solid #1DB954;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.playlist-item a:hover {
+    background-color: #1DB954;
+    color: white;
+}
+
+.no-recommendation {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+body.dark-mode .no-recommendation {
+    color: #999;
+}
+
+.spotify-button {
+    display: none;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.spotify-button:hover {
+    background-color: #1aa34a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-feed {
+        width: 100%;
+        height: auto;
+    }
+
+    #emotion-display {
+        font-size: 1.2rem;
+    }
+
+    .playlist-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    .spotify-button {
+        width: 90%;
+    }
+}

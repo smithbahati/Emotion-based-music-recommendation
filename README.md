@@ -1,1 +1,2 @@
-# Emotion-based-music-recommendation
+# music-recommendation
+emotion-based-music recommendation using spotify
